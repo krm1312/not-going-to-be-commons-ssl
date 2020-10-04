@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.narupley</groupId>
-  <artifactId>not-going-to-be-commons-ssl</artifactId>
-  <version>0.3.21-SNAPSHOT</version>
+  <artifactId>not-going-to-be-commons-ssl-ips</artifactId>
+  <version>0.3.21</version>
   <packaging>jar</packaging>
   <name>Not-Going-To-Be-Commons-SSL</name>
   <description>A Java 9+ compliant fork of Not-Yet-Commons-SSL</description>
@@ -21,17 +21,6 @@
       <organizationUrl>https://github.com/narupley</organizationUrl>
     </developer>
   </developers>
-  <scm>
-    <connection>scm:git:git://github.com/narupley/not-going-to-be-commons-ssl.git</connection>
-    <developerConnection>scm:git:ssh://github.com:narupley/not-going-to-be-commons-ssl.git</developerConnection>
-    <url>https://github.com/narupley/not-going-to-be-commons-ssl/tree/master</url>
-  </scm>
-  <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.jar.name>not-going-to-be-commons-ssl</project.jar.name>
@@ -186,31 +175,8 @@
       	    </goals>
       	  </execution>
       	</executions>
-      </plugin> -->
-      <plugin>
-      	<groupId>org.apache.maven.plugins</groupId>
-      	<artifactId>maven-gpg-plugin</artifactId>
-      	<version>1.6</version>
-      	<executions>
-      	  <execution>
-      	  	<id>sign-artifacts</id>
-      	  	<phase>verify</phase>
-      	  	<goals>
-      	  	  <goal>sign</goal>
-      	  	</goals>
-      	  	<configuration>
-      	  	  <gpgArguments>
-      	  	  	<gpgArgument>--pinentry-mode</gpgArgument>
-      	  	  	<gpgArgument>loopback</gpgArgument>
-      	  	  </gpgArguments>
-      	  	  <executable>${gpg.executable}</executable>
-      	  	  <keyname>${gpg.keyname}</keyname>
-      	  	  <passphrase>${gpg.passphrase}</passphrase>
-      	  	  <passphraseServerId>${gpg.keyname}</passphraseServerId>
-      	  	</configuration>
-      	  </execution>
-      	</executions>
       </plugin>
+      -->
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
